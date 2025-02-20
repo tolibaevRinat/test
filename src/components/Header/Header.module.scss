@@ -1,0 +1,24 @@
+@use '../../scss/helpers' as *;
+@use '../../scss/auxiliary' as *;
+
+.root {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+
+	padding-block: rem(10);
+	background-color: #fffff0;
+
+	border-bottom-right-radius: rem(8);
+	border-bottom-left-radius: rem(8);
+}
+.inner {
+	display: flex;
+	align-items: center;
+	gap: rem(10);
+}
+.title {
+	font-size: rem(16);
+	font-weight: 500;
+}

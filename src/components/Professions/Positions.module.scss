@@ -1,0 +1,23 @@
+@use '../../scss/helpers' as *;
+@use '../../scss/auxiliary' as *;
+
+.root {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min-content, max-content));
+	gap: rem(20);
+}
+.item {
+	text-align: center;
+}
+.button {
+	font-size: adaptiveSize(24, 16);
+
+	background-color: rgb(67, 97, 238);
+	padding: rem(6) rem(16);
+	border-radius: rem(4);
+
+	color: #fff;
+	&[disabled] {
+		background-color: lightgrey;
+	}
+}

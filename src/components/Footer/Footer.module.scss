@@ -1,0 +1,51 @@
+@use '../../scss/helpers' as *;
+@use '../../scss/auxiliary' as *;
+
+.root {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+
+	padding-block: rem(10);
+	background-color: #fffff0;
+
+	border-top-right-radius: rem(8);
+	border-top-left-radius: rem(8);
+}
+.inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: rem(10);
+}
+.link {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: rem(4);
+}
+.icon {
+	$size: 30;
+	width: rem($size);
+	height: rem($size);
+
+	fill: #000;
+	* {
+		fill: #000;
+	}
+	transition-duration: 0.2s;
+}
+.title {
+	font-size: rem(14);
+	font-weight: 500;
+	color: #000;
+
+	transition-duration: 0.2s;
+}
+.active,
+.active * {
+	fill: rgb(67, 97, 238);
+	color: rgb(67, 97, 238);
+}

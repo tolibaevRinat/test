@@ -1,0 +1,70 @@
+@use './mixins' as *;
+
+$pc: 1920.98;
+$laptop: 1440.98;
+$tablet: 1024.98;
+$mobile: 767.98;
+$mobile-s: 480.98;
+
+@mixin laptop {
+	@media (width <=rem($laptop)) {
+		@content;
+	}
+}
+
+@mixin laptop-mf {
+	@media (width > rem($laptop)) {
+		@content;
+	}
+}
+@mixin tablet {
+	@media (width <=rem($tablet)) {
+		@content;
+	}
+}
+
+@mixin tablet-mf {
+	@media (width > rem($tablet)) {
+		@content;
+	}
+}
+
+@mixin mobile {
+	@media (width <=rem($mobile)) {
+		@content;
+	}
+}
+
+@mixin mobile-mf {
+	@media (width > rem($mobile)) {
+		@content;
+	}
+}
+
+@mixin mobile-s {
+	@media (width <=rem($mobile-s)) {
+		@content;
+	}
+}
+
+@mixin mobile-s-mf {
+	@media (width > rem($mobile-s)) {
+		@content;
+	}
+}
+
+@mixin hover($hasActiveEffectOnMobile: true) {
+	@media (any-hover: hover) {
+		&:hover {
+			@content;
+		}
+	}
+
+	@if ($hasActiveEffectOnMobile) {
+		@media (any-hover: none) {
+			&:active {
+				@content;
+			}
+		}
+	}
+}

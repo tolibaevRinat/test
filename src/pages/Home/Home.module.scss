@@ -1,0 +1,7 @@
+@use '../../scss/helpers' as *;
+@use '../../scss/auxiliary' as *;
+
+.root {
+	padding-top: rem(50);
+	padding-bottom: rem(100);
+}
