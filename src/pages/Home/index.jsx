@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux'
 
 import styles from './Home.module.scss'
 import { swapTitle } from '../../redux/slices/headerSlice'
-import Positions from '../../components/Professions'
+import Positions from '../../components/Positions'
 
 const title = 'Asosiy'
 const Home = () => {
