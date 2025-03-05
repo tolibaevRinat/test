@@ -1,20 +1,19 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 import styles from './Footer.module.scss'
 
 const Footer = () => {
-	const [onChangeMenu, setOnChangeMenu] = React.useState(0)
+	const location = useLocation()
 
 	return (
 		<footer className={styles.root}>
 			<h1 className={`visually-hidden`}>Sayt pasti</h1>
 			<div className={`${styles.inner} container`}>
 				<Link
-					onClick={() => setOnChangeMenu(0)}
 					to='/'
 					className={`${styles.link} ${
-						onChangeMenu === 0 ? styles.active : ''
+						location.pathname === '/' ? styles.active : ''
 					}`}
 				>
 					<svg
@@ -28,10 +27,9 @@ const Footer = () => {
 					<h2 className={`${styles.title}`}>Asosiy</h2>
 				</Link>
 				<Link
-					onClick={() => setOnChangeMenu(1)}
 					to='/profile'
 					className={`${styles.link} ${
-						onChangeMenu === 1 ? styles.active : ''
+						location.pathname === '/profile' ? styles.active : ''
 					}`}
 				>
 					<svg
@@ -41,7 +39,7 @@ const Footer = () => {
 					>
 						<path d='M64.3 71.6c18 0 32.6-14.6 32.6-32.6S82.3 6.5 64.3 6.5 31.7 21.1 31.7 39s14.6 32.6 32.6 32.6zm0-56.6c13.2 0 24 10.8 24 24s-10.8 24-24 24-24-10.8-24-24 10.8-24 24-24zM7.9 122.5h113.2c2.4 0 4.3-1.9 4.3-4.3 0-22.5-18.3-40.9-40.9-40.9h-40C22 77.3 3.6 95.6 3.6 118.2c0 2.4 1.9 4.3 4.3 4.3zm36.6-36.6h40c16.4 0 29.9 12.2 32 28h-104c2.1-15.7 15.6-28 32-28z' />
 					</svg>
-					<h2 className={`${styles.title}`}>Profile</h2>
+					<h2 className={`${styles.title}`}>Profil</h2>
 				</Link>
 			</div>
 		</footer>

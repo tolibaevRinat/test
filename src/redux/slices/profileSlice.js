@@ -1,8 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-	name: 'Ravshan',
-	lastName: 'Shaipov',
+	name: 'Ism kiriting',
+	lastName: 'Familiya kiriting',
 	position: 'Mutaxassis',
 }
 
@@ -10,12 +10,15 @@ export const profileSlice = createSlice({
 	name: 'profile',
 	initialState,
 	reducers: {
-		swapTitle(state, action) {
-			state.title = action.payload
+		changeName(state, action) {
+			state.name = action.payload
+		},
+		changeLastName(state, action) {
+			state.lastName = action.payload
 		},
 	},
 })
 
-export const { swapTitle } = profileSlice.actions
+export const { changeName, changeLastName } = profileSlice.actions
 
 export default profileSlice.reducer

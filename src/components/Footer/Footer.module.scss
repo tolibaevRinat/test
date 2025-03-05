@@ -32,11 +32,14 @@
 	height: rem($size);
 
 	fill: #000;
-	* {
-		fill: #000;
-	}
+
 	transition-duration: 0.2s;
 }
+
+.icon *{
+	fill: #000;
+}
+
 .title {
 	font-size: rem(14);
 	font-weight: 500;

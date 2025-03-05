@@ -13,16 +13,19 @@
 	text-align: center;
 }
 .button {
+	display: inline-block;
+	text-align: center;
 	font-size: adaptiveSize(24, 18, 1024, 390);
 
 	width: 100%;
 
 	background-color: rgb(67, 97, 238);
-	padding: rem(6) rem(16);
+	padding: rem(10) rem(16);
 	border-radius: rem(4);
 
 	color: #fff;
-	&[disabled] {
+	&[href='/'],
+	&:disabled {
 		background-color: lightgrey;
 	}
 }

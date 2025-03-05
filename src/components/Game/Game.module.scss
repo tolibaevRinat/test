@@ -1,0 +1,53 @@
+@use '../../scss/helpers' as *;
+@use '../../scss/auxiliary' as *;
+
+.progress {
+	height: 10px;
+	border-radius: 30px;
+	background-color: rgb(232, 232, 232);
+	margin-bottom: 25px;
+
+	&__inner {
+		height: 100%;
+		border-radius: 30px;
+		width: 80%;
+		background: rgb(18, 231, 48);
+		transition: all 0.3s ease-in-out;
+		background: linear-gradient(
+			90deg,
+			rgba(18, 231, 48, 1) 0%,
+			rgba(0, 212, 255, 1) 100%
+		);
+	}
+}
+
+.progress {
+	font-size: rem(150);
+}
+
+.title {
+	font-size: rem(26);
+	font-weight: 700;
+	margin-bottom: rem(20);
+}
+.list {
+	list-style: none;
+	padding: 0;
+
+	display: flex;
+	flex-direction: column;
+	gap: rem(20);
+}
+
+.item {
+	line-height: 1.2;
+
+	padding: 15px;
+	border: 2px solid rgba(0, 0, 0, 0.1);
+	border-radius: 15px;
+	transition: all 0.1s ease-in-out;
+
+	&:hover {
+		border: 2px solid rgba(0, 0, 0, 0.3);
+	}
+}

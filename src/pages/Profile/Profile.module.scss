@@ -2,13 +2,49 @@
 @use '../../scss/auxiliary' as *;
 
 .root {
-	padding-top: rem(100);
+	padding-top: rem(60);
 	padding-bottom: rem(100);
 	color: #fff;
+
+	display: flex;
+	flex-direction: column;
+}
+
+@keyframes rotate {
+	to {
+		rotate: 360deg;
+	}
+}
+
+.gear {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: rem(10);
+
+	svg {
+		width: rem(72);
+		height: rem(72);
+		animation: rotate 4s infinite normal forwards;
+		animation-timing-function: linear;
+	}
+
+	path {
+		fill: #fff;
+	}
+
+	align-self: end;
+
+	.description {
+		color: #fff;
+		font-size: rem(18);
+	}
 }
 
 .img {
 	@include flex-center;
+
+	text-transform: uppercase;
 
 	width: rem(100);
 	height: rem(100);
@@ -18,18 +54,23 @@
 	margin-bottom: rem(20);
 
 	color: #000;
-	font-size: rem(30);
+	font-size: rem(40);
 	font-weight: 700;
 }
 
 .list {
 	display: grid;
-	gap: rem(20);
+	gap: rem(10);
 }
 .listItem {
 	font-size: rem(30);
+	padding-block: rem(10);
 
 	span {
 		font-weight: 700;
 	}
+
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }

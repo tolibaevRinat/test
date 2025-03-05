@@ -1,3 +1,53 @@
 @use '../../scss/helpers' as *;
 @use '../../scss/auxiliary' as *;
 
+.root {
+	padding: rem(80) 0 rem(20);
+}
+
+.form {
+	display: grid;
+	gap: rem(20);
+
+	color: #fff;
+
+	padding-right: rem(40);
+}
+.item {
+	display: flex;
+	align-items: center;
+	gap: rem(20);
+}
+.label {
+	font-size: rem(20);
+	flex-grow: 1;
+}
+
+.input {
+	border: none;
+	border-radius: rem(4);
+	height: rem(30);
+
+	font-size: rem(16);
+
+	&:focus {
+		border: none;
+		box-shadow: 0 0 rem(10) #fff;
+	}
+}
+
+.button {
+	font-size: rem(24);
+	margin-top: rem(30);
+
+	width: 100%;
+
+	background-color: rgb(67, 97, 238);
+	padding: rem(12) rem(16);
+	border-radius: rem(4);
+
+	color: #fff;
+	&[disabled] {
+		background-color: lightgrey;
+	}
+}

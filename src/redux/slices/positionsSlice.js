@@ -1,7 +1,11 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
+import {
+	createSlice,
+	createAsyncThunk,
+} from '@reduxjs/toolkit'
 import axios from 'axios'
 
-export const URL = 'https://5931966f88c8cb11.mokky.dev/positions'
+export const URL =
+	'https://5931966f88c8cb11.mokky.dev/positions'
 
 export const fetchPositions = createAsyncThunk(
 	'positions/fetchPositionsStatus',
@@ -26,10 +30,13 @@ export const positionSlice = createSlice({
 				state.status = 'loading'
 				state.items = []
 			})
-			.addCase(fetchPositions.fulfilled, (state, action) => {
-				state.items = action.payload
-				state.status = 'success'
-			})
+			.addCase(
+				fetchPositions.fulfilled,
+				(state, action) => {
+					state.items = action.payload
+					state.status = 'success'
+				}
+			)
 			.addCase(fetchPositions.rejected, state => {
 				state.status = 'error'
 				state.items = []

@@ -10,7 +10,7 @@ const Header = () => {
 	const navigation = useNavigate()
 	const onClickBackButton = () => navigation(-1)
 
-	const conditions = title === 'Asosiy' || title === 'Profile'
+	const conditions = title === 'Asosiy' || title === 'Profil'
 
 	return (
 		<header className={styles.root}>
