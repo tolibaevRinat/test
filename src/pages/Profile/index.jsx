@@ -14,6 +14,8 @@ const Profile = () => {
 
 	const lastAccessiblePosition = useSelector(selectLastAccessiblePosition)
 
+	console.log(lastAccessiblePosition)
+
 	const dispatch = useDispatch()
 	React.useEffect(() => {
 		dispatch(swapTitle(title))
@@ -43,7 +45,7 @@ const Profile = () => {
 				</li>
 				<li className={`${styles.listItem}`}>
 					<span>Lavozim:</span>{' '}
-					{lastAccessiblePosition ? lastAccessiblePosition.name : 'Yuklanyapti'}
+					{lastAccessiblePosition ? lastAccessiblePosition.title : 'Yuklanyapti'}
 				</li>
 			</ul>
 		</section>
