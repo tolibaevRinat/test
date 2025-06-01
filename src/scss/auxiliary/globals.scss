@@ -33,9 +33,7 @@ body {
 }
 
 .container {
-	max-width: calc(
-		$containerWidthInPc + $containerPadding * 2
-	);
+	max-width: calc($containerWidthInPc + $containerPadding * 2);
 	margin-inline: auto;
 	padding-inline: $containerPadding;
 

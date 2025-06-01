@@ -14,9 +14,9 @@ const Home = () => {
 	}, [dispatch])
 
 	return (
-		<section className={styles.root}>
+		<>
 			<Positions />
-		</section>
+		</>
 	)
 }
 

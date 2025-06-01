@@ -1,6 +1,10 @@
 @use '../../scss/helpers' as *;
 @use '../../scss/auxiliary' as *;
 
+.root {
+	padding: rem(30) rem(30) rem(40);
+}
+
 .progress {
 	height: 10px;
 	border-radius: 30px;
@@ -13,11 +17,7 @@
 		width: 80%;
 		background: rgb(18, 231, 48);
 		transition: all 0.3s ease-in-out;
-		background: linear-gradient(
-			90deg,
-			rgba(18, 231, 48, 1) 0%,
-			rgba(0, 212, 255, 1) 100%
-		);
+		background: linear-gradient(90deg, rgba(18, 231, 48, 1) 0%, rgba(0, 212, 255, 1) 100%);
 	}
 }
 
@@ -47,7 +47,7 @@
 	border-radius: 15px;
 	transition: all 0.1s ease-in-out;
 
-	&:hover {
+	&:active {
 		border: 2px solid rgba(0, 0, 0, 0.3);
 	}
 }

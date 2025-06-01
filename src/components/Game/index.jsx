@@ -2,30 +2,21 @@ import React from 'react'
 
 import styles from './Game.module.scss'
 
-const Game = () => {
+const Game = ({ question, onClickVariant, percentage }) => {
 	return (
-		<>
+		<div className={`${styles.root}`}>
 			<div className={`${styles.progress}`}>
-				<div
-					style={{ width: '50%' }}
-					className={`${styles.progress__inner}`}
-				></div>
+				<div style={{ width: `${percentage}%` }} className={`${styles.progress__inner}`}></div>
 			</div>
-			<h1 className={`${styles.title}`}>
-				Что такое useState?
-			</h1>
+			<h1 className={`${styles.title}`}>{question.title}</h1>
 			<ul className={`${styles.list}`}>
-				<li className={`${styles.item}`}>
-					Это функция для хранения данных компонента
-				</li>
-				<li className={`${styles.item}`}>
-					Это глобальный стейт
-				</li>
-				<li className={`${styles.item}`}>
-					Это когда на ты никому не нужен
-				</li>
+				{question.variants.map((text, index) => (
+					<li onClick={() => onClickVariant(index)} key={text} className={`${styles.item}`}>
+						{text}
+					</li>
+				))}
 			</ul>
-		</>
+		</div>
 	)
 }
 

@@ -2,12 +2,10 @@
 @use '../../scss/auxiliary' as *;
 
 .root {
+	padding-top: rem(60);
+
 	max-width: rem(500);
 	margin-inline: auto;
-
-	display: flex;
-	flex-direction: column;
-	gap: rem(20);
 }
 .item {
 	text-align: center;
@@ -15,7 +13,7 @@
 .button {
 	display: inline-block;
 	text-align: center;
-	font-size: adaptiveSize(24, 18, 1024, 390);
+	font-size: adaptiveSize(30, 18, 1024, 320);
 
 	width: 100%;
 
@@ -27,5 +25,32 @@
 	&[href='/'],
 	&:disabled {
 		background-color: lightgrey;
+	}
+}
+
+.section {
+	padding-bottom: rem(40);
+	&:last-child {
+		padding-bottom: rem(100);
+	}
+}
+
+.title {
+	color: #fff;
+	text-align: center;
+
+	margin-bottom: rem(16);
+}
+
+.list {
+	display: grid;
+	gap: rem(10);
+
+	padding-bottom: rem(40);
+}
+
+:global {
+	.last-list {
+		padding-bottom: 100px;
 	}
 }
