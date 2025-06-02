@@ -34,7 +34,7 @@ const Question = () => {
 		if (allQuestions.length > 0) {
 			const shuffled = shuffleArray(allQuestions)
 			// Выбираем 20 вопросов или все, если их меньше 20
-			const selectedQuestions = shuffled.slice(0, Math.min(20, allQuestions.length))
+			const selectedQuestions = shuffled.slice(0, Math.min(5, allQuestions.length))
 			setGameQuestions(selectedQuestions)
 			console.log('Selected questions for this game:', selectedQuestions.length)
 			setStep(0) // Сбрасываем текущий шаг
